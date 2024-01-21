@@ -1,0 +1,402 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    background: #0c1123;
+    font-size: 62.5px;
+}
+
+.card{
+    position: relative;
+    background: #131b33;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+
+.card .ani:nth-child(1)
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, transparent, #17f3fd);
+    animation: animate_one 2s linear infinite;
+}
+
+@keyframes animate_one {
+    0%
+    {
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+.card .ani:nth-child(2)
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #17f3fd);
+    animation: animate_two 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate_two {
+    0%
+    {
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+.card .ani:nth-child(3)
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to left, transparent, #17f3fd);
+    animation: animate_three 2s linear infinite;
+}
+
+@keyframes animate_three {
+    0%
+    {
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.card .ani:nth-child(4)
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #17f3fd);
+    animation: animate_four 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate_four {
+    0%
+    {
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+#time{
+    display: block;
+}
+
+.div1{
+    background-color: aliceblue;
+    margin: .8rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    color: rgb(23, 124, 229);
+    text-align: center;
+    letter-spacing: .1rem;
+    justify-content: center;
+    border: 2px solid rgb(23, 124, 229);
+}
+
+.timedisplay{
+    display: inline-flex;
+    color: rgb(23, 124, 229)
+}
+
+
+.img-animation{
+margin: .8rem;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    width: 98.7%;
+    height: 99%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 0;
+    }
+
+    67% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.imgb{
+    border-radius: 1rem;
+    width: 98.7%;
+    height: 83vh;
+    margin: .8rem;
+    border: 2px solid rgb(23, 124, 229);
+    position: absolute;
+    object-fit: cover;
+    top: 9rem;
+    left: 0;
+    animation: fade 9s ease-in-out infinite alternate;
+}
+
+.imgb:nth-last-of-type(1) {
+    animation-delay: 0s;
+}
+
+.imgb:nth-last-of-type(2) {
+    animation-delay: 0s;
+}
+
+.imgb:nth-last-of-type(3) {
+    animation-delay: 3s;
+}
+
+.imgb:nth-last-of-type(4) {
+    animation-delay: 6s;
+}
+
+.imgb:nth-last-of-type(5) {
+    animation-delay: 9s;
+}
+
+.imgb:nth-last-of-type(6) {
+    animation-delay: 12s;
+}
+
+.imgb:nth-last-of-type(7) {
+    animation-delay: 15s;
+}
+
+.imgb:nth-last-of-type(8) {
+    animation-delay: 18s;
+}
+
+.imgb:nth-last-of-type(9) {
+    animation-delay: 21s;
+}
+
+.imgb:nth-last-of-type(10) {
+    animation-delay: 24s;
+}
+
+.imgb:nth-last-of-type(11) {
+    animation-delay: 27s;
+}
+
+.imgb:nth-last-of-type(12) {
+    animation-delay: 30s;
+}
+
+
+
+
+
+
+
+
+
+.quote-box{
+    z-index: 1;
+    border: 5px;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.quote-box h2{
+    font-size: 3rem;
+    margin-bottom: 4vh;
+    position: relative;
+}
+
+.quote-box h2::after{
+    content: '';
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgb(23, 124, 229);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50px);
+}
+.quote-box blockquote{
+    font-size: 2rem;
+    min-height: 110px;
+}
+
+.quote-box blockquote::before, .quote-box blockquote::after{
+    content: '""';
+}
+.quote-box .qspan{
+    display: block;
+    margin-top: 10px;
+    font-size: 2rem;
+    float: right;
+    position: relative;
+}
+.quote-box .qspan::before{
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: rgb(23, 124, 229);
+    position: absolute;
+    top: 50%;
+    left: -30px;
+}
+
+.quote-box div{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.quote-box button{
+    background: rgb(23, 124, 229);
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid rgb(23, 124, 229);
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    cursor: pointer;
+}
+.quote-box button .timg{
+    border: 0px;
+    height: 50px;
+    margin-left:10px;
+}
+.quote-box button:nth-child(2){
+    z-index: 2;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+    background: transparent;
+    color: #333;
+}
+
+
+@media (max-width: 770px) {
+
+    .div1{
+        font-size: 1.5rem;
+    }
+
+    .imgb{
+        margin: .7rem;
+        width: 94.7%;
+        height: 89vh;
+        top: 7rem
+    }
+    .quote-box{
+        top: 35%;
+        width: 90%;
+    }
+    .quote-box h2{
+        font-size: 1.8rem;
+    }
+    .quote-box blockquote{
+        font-size: 1.5rem;
+    }
+    .quote-box .qspan{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .div1{
+        font-size: 1.2rem;
+    }
+
+    .imgb{
+        width: 93.7%;
+        top: 5.5rem;
+        height: 87vh;
+    }
+    .quote-box{
+        width: 99%;
+    }
+    .quote-box h2{
+        font-size: 1.3rem;
+    }
+    .quote-box blockquote{
+        font-size: 1.2rem;
+    }
+    .quote-box .qspan{
+        font-size: .8rem;
+    }
+}
+
+/*
+@media (max-width: 400px) {
+
+    .div1{
+        font-size: .8rem;
+    }
+
+    .imgb{
+        width: 90.7%;
+        top: 4.5rem;
+        height: 70vh;
+    }
+    .quote-box{
+        width: 90%;
+        top: 90vh;
+    }
+    .quote-box h2{
+        font-size: .8rem;
+    }
+    .quote-box blockquote{
+        font-size: .7rem;
+    }
+    .quote-box .qspan{
+        font-size: .8rem;
+    }
+}
+
